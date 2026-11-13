@@ -1,0 +1,13 @@
+{
+  "name": "mini-pi-agent",
+  "version": "2.0.0",
+  "type": "module",
+  "description": "Pi-Zen Engineering Harness Agent System (Pi Harness + exp-skill + Code Zen + Design Skill v4.0)",
+  "scripts": {
+    "start": "node agent.ts",
+    "init": "node agent.ts init",
+    "check": "node agent.ts check",
+    "mock": "node mock-test.ts",
+    "test": "node --test tests/harness.test.ts"
+  }
+}

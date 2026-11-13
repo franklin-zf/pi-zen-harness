@@ -1,0 +1,65 @@
+{
+  "$schema": "https://exp-skill.local/schemas/content-handoff-2.1.json",
+  "schema_version": "2.1",
+  "handoff_stage": "solution",
+  "project_id": "pi_zen_project",
+  "module_ids": ["MOD-001"],
+  "slice_ids": ["SLC-001"],
+  "requirement_ids": ["REQ-001"],
+  "taste_contract": {
+    "visual_thesis": "Make the primary operational state and next action immediately clear.",
+    "content_tension": "High-contrast primary workspace anchored against quiet supporting telemetry.",
+    "signature_move": "Concentric optical radius hierarchy with single-truth header context.",
+    "anti_reference": "No equal-weight 4-card walls, no eyebrow stamp spam (01 // LABEL), no fake screenshots.",
+    "restraint_rule": "Render only authentic scope-verified metrics; zero visual-fill padding."
+  },
+  "roles": [
+    {
+      "role_id": "ROL-001",
+      "role_name": "Primary User"
+    }
+  ],
+  "surfaces": [
+    {
+      "surface_id": "primary_workspace",
+      "surface_category": "host_dashboard",
+      "discovery_surface": "role_home",
+      "allowed_scopes": [
+        "[Global: Host-level]",
+        "[Asset: Data-level]"
+      ],
+      "entry_ids": ["ENT-001"],
+      "cards": [
+        {
+          "card_id": "card_primary_status",
+          "label": "Task Execution Status",
+          "context_scope": "[Global: Host-level]",
+          "metric_key": "task_status",
+          "value_type": "status_enum"
+        },
+        {
+          "card_id": "card_verified_reqs",
+          "label": "Verified Requirements",
+          "context_scope": "[Asset: Data-level]",
+          "metric_key": "verified_req_count",
+          "value_type": "integer"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "entry_id": "ENT-001",
+      "role_id": "ROL-001",
+      "requirement_id": "REQ-001",
+      "module_id": "MOD-001",
+      "surface_id": "primary_workspace",
+      "target": {
+        "type": "route",
+        "key": "workspace-home"
+      },
+      "priority": "primary",
+      "release_stage": "available"
+    }
+  ]
+}
